@@ -4,8 +4,12 @@ while i > 0:
             2: {}}
     # dic1 add even/odd, and dict2 the number inserted
     def picka():
-        a = input("odd or even: ")
-        the_box[1]= a
+        dict1 = input("odd or even: ")
+        the_box[1] = dict1
+        if dict1 != "even" or "odd":
+            dict1 = input("odd or even: ")
+        else:
+            break
         # print("You've picked: " + a)
     picka()
     def rand():
@@ -16,14 +20,14 @@ while i > 0:
         num1 = int(input("pick a number: "))
         num2 = rand()
         return num1 + num2
-    s = game_on()
+    game1 = game_on()
     def even_odd():
-        the_box[2]= s
-        if (s % 2) == 0:
-            print("{0} is even".format(s))
+        the_box[2]= game1
+        if (game1 % 2) == 0:
+            print("{0} is even".format(game1))
             the_box[3]= "even"
         else:
-            print("{0} is odd".format(s))
+            print("{0} is odd".format(game1))
             the_box[3] = "odd"
     even_odd()
     def finals():
@@ -33,3 +37,4 @@ while i > 0:
             print("You Lose")
     finals()
     print(the_box)
+# is this correct now?
