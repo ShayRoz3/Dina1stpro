@@ -4,13 +4,13 @@ while i > 0:
             2: {}}
     # dic1 add even/odd, and dict2 the number inserted
     def picka():
-        dict1 = input("odd or even: ")
-        the_box[1] = dict1
-        if dict1 != "even" or "odd":
-            dict1 = input("odd or even: ")
-        else:
-            break
-        # print("You've picked: " + a)
+        while True:
+            dict1 = input(str("odd or even: "))
+            if dict1 == str("odd") or dict1 == str("even"):
+                dict1 = the_box[1]
+                break
+            else:
+                print("sorry thats a mistake")
     picka()
     def rand():
         import random
